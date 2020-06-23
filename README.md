@@ -19,18 +19,17 @@ Plataforma web para que las empresas, profesionales y comerciante individual, en
 ## Instalacion
 
 Para el Backend
-
+```
   cd bckFast
   npm install
-
-
+```
 Para el Frontend
-
+```
   cd frtFast
   npm install
-
+```
 
 ## Iniciar Servicios Desarrollo
 
-en la carpeta bckFast correr nodemon
+en la carpeta ```bckFast``` correr ```nodemon```
 
