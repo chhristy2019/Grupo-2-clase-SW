@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "84800506-d0ee-4b11-bfba-ac439098bfa5",
+		"name": "Fast Business Network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{HOST}}/api/category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/category",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				},
+				"description": "Muestra Todas las Categorias"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/category/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "numerocategoria",
+							"value": "3",
+							"description": "Muestra el numero de la categoria",
+							"type": "text"
+						},
+						{
+							"key": "nombrecategoria",
+							"value": "Clinica",
+							"description": "Muestra el nombre de la categoria",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{HOST}}/api/category/new",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"new"
+					]
+				},
+				"description": "Agrega una nueva categoria"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/category/all/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/category/all/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"all",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5ef2d5cf63f150703c0937a4"
+						}
+					]
+				},
+				"description": "Busca las categorias por el ID"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/category/one/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/category/one/:id",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"one",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5ef57031989d5c2b9cb6705a"
+						}
+					]
+				},
+				"description": "Elimina una categoria por el ID"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/servicio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/servicio",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"servicio"
+					]
+				},
+				"description": "Muestra todos los servicios"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/servicio/new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreempresa",
+							"value": "Cesar Pizzas",
+							"description": "Muestra el nombre de la empresa",
+							"type": "text"
+						},
+						{
+							"key": "nombreservicio",
+							"value": "Combo 2",
+							"description": "Muestra el nombre del servicio",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Pizza familiar ",
+							"description": "Muestra la descripcion",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "390",
+							"description": "Muestra el precio",
+							"type": "text"
+						},
+						{
+							"key": "horario",
+							"value": "Lunes a Sabado",
+							"description": "Muestra el horario",
+							"type": "text"
+						},
+						{
+							"key": "agregarimagen",
+							"value": "https://ofertazo.com.ve/wp-content/uploads/2016/09/pizza123.png",
+							"description": "Muestra la imagen",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{HOST}}/api/servicio/new",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"servicio",
+						"new"
+					]
+				},
+				"description": "Agrega un servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/servicio/one/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/servicio/one/:id",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"servicio",
+						"one",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5ef643abe8877fd802bdcd95"
+						}
+					]
+				},
+				"description": "Busca el servicio por el id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/servicios/one/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombreempresa",
+							"value": "Pizza Hut",
+							"description": "Muestra el nombre de la empresa",
+							"type": "text"
+						},
+						{
+							"key": "nombreservicio",
+							"value": "Combo 2",
+							"description": "Muestra el nombre del servicio",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Pizza familiar y refresco",
+							"description": "Muestra la descripcion",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "450",
+							"description": "Muestra el precio",
+							"type": "text"
+						},
+						{
+							"key": "horario",
+							"value": "Lunes a Sabado",
+							"description": "Muestra el horario",
+							"type": "text"
+						},
+						{
+							"key": "agregarimagen",
+							"value": "pizzacombo1.png",
+							"description": "Muestra la imagen",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/servicio/one/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"servicio",
+						"one",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5ef643abe8877fd802bdcd95"
+						}
+					]
+				},
+				"description": "Actualiza un servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "{{HOST}}/api/servicio/one/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/servicio/one/:id",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"servicio",
+						"one",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5ef649e1dbb511364caa3045"
+						}
+					]
+				},
+				"description": "Elimina un servicio"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/sec/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Pizza Hut",
+							"description": "Muestra el nombre",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "pizzahut@gamil.com",
+							"description": "Muestra el email",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "27572752",
+							"description": "Muestra el telefono",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Juticalpa",
+							"description": "Muestra la direccion",
+							"type": "text"
+						},
+						{
+							"key": "¿Qué desea hacer?",
+							"value": "Venta de productos",
+							"description": "Muestra lo que desea hacer",
+							"type": "text"
+						},
+						{
+							"key": "pswd",
+							"value": "1234569",
+							"description": "Muestra el pswd",
+							"type": "text"
+						},
+						{
+							"key": "verificar pswd",
+							"value": "1234569",
+							"description": "Muestra la verificacion de pswd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"signin"
+					]
+				},
+				"description": "Agrega un nuevo usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/sec/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "pizzahut@gmail.com",
+							"description": "Muestra el email",
+							"type": "text"
+						},
+						{
+							"key": "pswd",
+							"value": "1234569",
+							"description": "Muestra la contraseña",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/sec/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"sec",
+						"login"
+					]
+				},
+				"description": "Inicia sesión"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
