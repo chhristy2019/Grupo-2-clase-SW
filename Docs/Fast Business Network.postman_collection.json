@@ -6,428 +6,583 @@
 	},
 	"item": [
 		{
-			"name": "{{HOST}}/api/category",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}/api/category",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"category"
-					]
+			"name": "Servicio",
+			"item": [
+				{
+					"name": "{{HOST}}/api/servicio",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvY3VtZW50b3NtMDlAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sIl9pZCI6IjVmMjg2NDAyYjY2MmNmMmRmY2UxZDFmZiIsImlhdCI6MTU5NjUxOTY5OSwiZXhwIjoxNjA2ODg3Njk5fQ.q4S_e8oSeXV0A_NYaF11PuxEseSjg83JB1DGDor-Ba0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{HOST}}/api/servicio",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"servicio"
+							]
+						},
+						"description": "Muestra todos los servicios"
+					},
+					"response": []
 				},
-				"description": "Muestra Todas las Categorias"
-			},
-			"response": []
+				{
+					"name": "{{HOST}}/api/servicio/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MTgwODEsImV4cCI6MTYwNjc4NjA4MX0.uGD5Z8_LEAxalfMvWvTEx4MAH_ps6__XUCF-0E9y37M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreempresa",
+									"value": "OlanchoNet",
+									"description": "Muestra el nombre de la empresa",
+									"type": "text"
+								},
+								{
+									"key": "nombreservicio",
+									"value": "Internet",
+									"description": "Muestra el nombre del Servicio",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Internet de 5MB",
+									"description": "Muestra la descripcion",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "600",
+									"description": "Muestra el precio",
+									"type": "text"
+								},
+								{
+									"key": "horario",
+									"value": "Lunes a Viernes",
+									"description": "Muestra el horario",
+									"type": "text"
+								},
+								{
+									"key": "contacto",
+									"value": "88345678",
+									"description": "Muestra el contacto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/servicio/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"servicio",
+								"new"
+							]
+						},
+						"description": "Agrega un servicio"
+					},
+					"response": []
+				},
+				{
+					"name": "{{HOST}}/api/servicio/one/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/servicio/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"servicio",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ef643abe8877fd802bdcd95"
+								}
+							]
+						},
+						"description": "Busca el servicio por el id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{HOST}}/api/servicio/one/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreempresa",
+									"value": "Pizza Hut",
+									"description": "Muestra el nombre de la empresa",
+									"type": "text"
+								},
+								{
+									"key": "nombreservicio",
+									"value": "Combo 2",
+									"description": "Muestra el nombre del servicio",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Pizza familiar y refresco",
+									"description": "Muestra la descripcion",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "500",
+									"description": "Muestra el precio",
+									"type": "text"
+								},
+								{
+									"key": "horario",
+									"value": "Lunes a Sabado",
+									"description": "Muestra el horario",
+									"type": "text"
+								},
+								{
+									"key": "contacto",
+									"value": "98317273",
+									"description": "Muestra contacto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/servicio/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"servicio",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5ef64f094d417e3a9c7a9681"
+								}
+							]
+						},
+						"description": "Actualiza un servicio"
+					},
+					"response": []
+				},
+				{
+					"name": "{{HOST}}/api/servicio/one/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRvY3VtZW50b3NtMDlAZ21haWwuY29tIiwicm9sZXMiOlsicHVibGljIl0sIl9pZCI6IjVmMjg2NDAyYjY2MmNmMmRmY2UxZDFmZiIsImlhdCI6MTU5NjUyMDEyNywiZXhwIjoxNjA2ODg4MTI3fQ.qOksLipVEfz79P52CTW05fvzeWhVr4_IUs4kYuxFfuU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/servicio/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"servicio",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f28efb7f626612d1cd189c1"
+								}
+							]
+						},
+						"description": "Elimina un servicio"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "{{HOST}}/api/category/new",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "numerocategoria",
-							"value": "3",
-							"description": "Muestra el numero de la categoria",
-							"type": "text"
+			"name": "Producto",
+			"item": [
+				{
+					"name": "{{HOST}}/api/producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MzUxMTgsImV4cCI6MTYwNjgwMzExOH0.0N7SnnRoxd0k7JLMyI-a1B73nucof37jL6dN4TprcJc",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "nombrecategoria",
-							"value": "Clinica",
-							"description": "Muestra el nombre de la categoria",
-							"type": "text"
-						}
-					]
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/producto",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"producto"
+							]
+						},
+						"description": "Muestra Todos los Productos"
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{HOST}}/api/category/new",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"category",
-						"new"
-					]
+				{
+					"name": "{{HOST}}/api/producto/new",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MTgwODEsImV4cCI6MTYwNjc4NjA4MX0.uGD5Z8_LEAxalfMvWvTEx4MAH_ps6__XUCF-0E9y37M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreempresa",
+									"value": "Salco",
+									"description": "Muestra el nombre de la empresa",
+									"type": "text"
+								},
+								{
+									"key": "nombreproducto",
+									"value": "Audifonos",
+									"description": "Muestra el nombre del Producto",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Audifonos inalambricos XTECH",
+									"description": "Muestra la descripcion",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "600",
+									"description": "Muestra el precio",
+									"type": "text"
+								},
+								{
+									"key": "horario",
+									"value": "Lunes a Viernes",
+									"description": "Muestra el horario",
+									"type": "text"
+								},
+								{
+									"key": "contacto",
+									"value": "98219024",
+									"description": "Muestra el contacto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/producto/new",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"new"
+							]
+						},
+						"description": "Agrega un Producto a la base de datos"
+					},
+					"response": []
 				},
-				"description": "Agrega una nueva categoria"
-			},
-			"response": []
+				{
+					"name": "{{HOST}}/api/producto/one/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MTgwODEsImV4cCI6MTYwNjc4NjA4MX0.uGD5Z8_LEAxalfMvWvTEx4MAH_ps6__XUCF-0E9y37M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/producto/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f27ac52a82f3c2ba0550789"
+								}
+							]
+						},
+						"description": "Busca un producto por id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{HOST}}/api/producto/one/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MzUxMTgsImV4cCI6MTYwNjgwMzExOH0.0N7SnnRoxd0k7JLMyI-a1B73nucof37jL6dN4TprcJc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombreempresa",
+									"value": "Salco",
+									"description": "Muestra el nombre de la empresa",
+									"type": "text"
+								},
+								{
+									"key": "nombreproducto",
+									"value": "Audifonos",
+									"description": "Muestra el nombre del producto",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "Audifonos inalambricos XTECH",
+									"description": "Muestra la descripcion",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "500",
+									"description": "Muestra el precio",
+									"type": "text"
+								},
+								{
+									"key": "horario",
+									"value": "Lunes a Viernes",
+									"description": "Muestra el horario",
+									"type": "text"
+								},
+								{
+									"key": "contacto",
+									"value": "95020584",
+									"description": "Muestra el Contacto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/producto/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f27ac52a82f3c2ba0550789"
+								}
+							]
+						},
+						"description": "Actualiza un producto por id"
+					},
+					"response": []
+				},
+				{
+					"name": "{{HOST}}/api/producto/one/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImYubXVvejQ1QGdtYWlsLmNvbSIsInJvbGVzIjpbInB1YmxpYyJdLCJfaWQiOiI1ZjI3MWVlMDdjNTNhYzJiYjBhYzE3NGEiLCJpYXQiOjE1OTY0MzUxMTgsImV4cCI6MTYwNjgwMzExOH0.0N7SnnRoxd0k7JLMyI-a1B73nucof37jL6dN4TprcJc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{HOST}}/api/producto/one/:id",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"producto",
+								"one",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5f27c3b6a82f3c2ba055078c"
+								}
+							]
+						},
+						"description": "Elimina un producto por id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "{{HOST}}/api/category/all/:id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/api/category/all/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"category",
-						"all",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "5ef2d5cf63f150703c0937a4"
-						}
-					]
+			"name": "Seguridad",
+			"item": [
+				{
+					"name": "{{HOST}}/api/sec/signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "f.muoz45@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "hola",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{HOST}}/api/sec/signin",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"sec",
+								"signin"
+							]
+						},
+						"description": "Crea un usuario con el correo y contraseña"
+					},
+					"response": []
 				},
-				"description": "Busca las categorias por el ID"
-			},
-			"response": []
-		},
-		{
-			"name": "{{HOST}}/api/category/one/:id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}/api/category/one/:id",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"category",
-						"one",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "5ef57031989d5c2b9cb6705a"
-						}
-					]
-				},
-				"description": "Elimina una categoria por el ID"
-			},
-			"response": []
-		},
-		{
-			"name": "{{HOST}}/api/servicio",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}/api/servicio",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"servicio"
-					]
-				},
-				"description": "Muestra todos los servicios"
-			},
-			"response": []
-		},
-		{
-			"name": "{{HOST}}/api/servicio/new",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "nombreempresa",
-							"value": "Cesar Pizzas",
-							"description": "Muestra el nombre de la empresa",
-							"type": "text"
+				{
+					"name": "{{HOST}}/api/sec/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "documentosm09@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "pswd",
+									"value": "1234567",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "nombreservicio",
-							"value": "Combo 2",
-							"description": "Muestra el nombre del servicio",
-							"type": "text"
+						"url": {
+							"raw": "{{HOST}}/api/sec/login",
+							"host": [
+								"{{HOST}}"
+							],
+							"path": [
+								"api",
+								"sec",
+								"login"
+							]
 						},
-						{
-							"key": "descripcion",
-							"value": "Pizza familiar ",
-							"description": "Muestra la descripcion",
-							"type": "text"
-						},
-						{
-							"key": "precio",
-							"value": "390",
-							"description": "Muestra el precio",
-							"type": "text"
-						},
-						{
-							"key": "horario",
-							"value": "Lunes a Sabado",
-							"description": "Muestra el horario",
-							"type": "text"
-						},
-						{
-							"key": "agregarimagen",
-							"value": "https://ofertazo.com.ve/wp-content/uploads/2016/09/pizza123.png",
-							"description": "Muestra la imagen",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "{{HOST}}/api/servicio/new",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"servicio",
-						"new"
-					]
-				},
-				"description": "Agrega un servicio"
-			},
-			"response": []
-		},
-		{
-			"name": "{{HOST}}/api/servicio/one/:id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}/api/servicio/one/:id",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"servicio",
-						"one",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "5ef643abe8877fd802bdcd95"
-						}
-					]
-				},
-				"description": "Busca el servicio por el id"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/servicios/one/:id",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "nombreempresa",
-							"value": "Pizza Hut",
-							"description": "Muestra el nombre de la empresa",
-							"type": "text"
-						},
-						{
-							"key": "nombreservicio",
-							"value": "Combo 2",
-							"description": "Muestra el nombre del servicio",
-							"type": "text"
-						},
-						{
-							"key": "descripcion",
-							"value": "Pizza familiar y refresco",
-							"description": "Muestra la descripcion",
-							"type": "text"
-						},
-						{
-							"key": "precio",
-							"value": "450",
-							"description": "Muestra el precio",
-							"type": "text"
-						},
-						{
-							"key": "horario",
-							"value": "Lunes a Sabado",
-							"description": "Muestra el horario",
-							"type": "text"
-						},
-						{
-							"key": "agregarimagen",
-							"value": "pizzacombo1.png",
-							"description": "Muestra la imagen",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/servicio/one/:id",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"servicio",
-						"one",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "5ef643abe8877fd802bdcd95"
-						}
-					]
-				},
-				"description": "Actualiza un servicio"
-			},
-			"response": []
-		},
-		{
-			"name": "{{HOST}}/api/servicio/one/:id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "{{HOST}}/api/servicio/one/:id",
-					"host": [
-						"{{HOST}}"
-					],
-					"path": [
-						"api",
-						"servicio",
-						"one",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "5ef649e1dbb511364caa3045"
-						}
-					]
-				},
-				"description": "Elimina un servicio"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/sec/signin",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "nombre",
-							"value": "Pizza Hut",
-							"description": "Muestra el nombre",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "pizzahut@gamil.com",
-							"description": "Muestra el email",
-							"type": "text"
-						},
-						{
-							"key": "telefono",
-							"value": "27572752",
-							"description": "Muestra el telefono",
-							"type": "text"
-						},
-						{
-							"key": "direccion",
-							"value": "Juticalpa",
-							"description": "Muestra la direccion",
-							"type": "text"
-						},
-						{
-							"key": "¿Qué desea hacer?",
-							"value": "Venta de productos",
-							"description": "Muestra lo que desea hacer",
-							"type": "text"
-						},
-						{
-							"key": "pswd",
-							"value": "1234569",
-							"description": "Muestra el pswd",
-							"type": "text"
-						},
-						{
-							"key": "verificar pswd",
-							"value": "1234569",
-							"description": "Muestra la verificacion de pswd",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/sec/signin",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"sec",
-						"signin"
-					]
-				},
-				"description": "Agrega un nuevo usuario"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/api/sec/login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "email",
-							"value": "pizzahut@gmail.com",
-							"description": "Muestra el email",
-							"type": "text"
-						},
-						{
-							"key": "pswd",
-							"value": "1234569",
-							"description": "Muestra la contraseña",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "http://localhost:3000/api/sec/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"sec",
-						"login"
-					]
-				},
-				"description": "Inicia sesión"
-			},
-			"response": []
+						"description": "Ingresa el usuario con el correo y contraseña"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

@@ -43,9 +43,9 @@ module.exports = class {
   }
 
  //Agrega un servicio
-  static async newOne( nombreempresa, nombreservicio, descripcion, precio, horario, agregarimagen){ 
+  static async newOne( nombreempresa, nombreservicio, descripcion, precio, horario, contacto){ 
     try{  
-        const newserv = {nombreempresa:nombreempresa, nombreservicio:nombreservicio, descripcion:descripcion, precio:precio, horario:horario, agregarimagen:agregarimagen};
+        const newserv = {nombreempresa:nombreempresa, nombreservicio:nombreservicio, descripcion:descripcion, precio:precio, horario:horario, contacto:contacto};
         const result = await serviceColl.insertOne(newserv);
         return result;
     }catch(err){
@@ -54,20 +54,19 @@ module.exports = class {
     }
  }
 
- //Modifica
- /*
- static async updateOne(id) {
-    try {
-      let filter = { "_id": new ObjectId(id) };
-      let update =  { nombreempresa, nombreservicio, descripcion, precio, horario, agregarimagen };
-      const result = await serviceColl.updateOne(filter, update);
-      return result;
-     } catch (err) {
-      console.log(err);
-      return err;
-    }
-  } 
-  */
+ //Modifica un servicio
+ 
+ static async updateOne(id, nombreempresa, nombreservicio, descripcion, precio, horario, contacto) {
+  try {
+    let filter = {"_id": new ObjectId(id)};
+    let update = { "$set":{"nombreempresa":nombreempresa, "nombreservicio":nombreservicio, "descripcion":descripcion, "precio":precio, "horario":horario, "contacto":contacto}};
+    const result = await serviceColl.updateOne(filter,update);
+    return result;
+  }catch(err){
+    console.log(err);
+    return err;
+  }
+}
 
 
  //Elimina un servicio por medio del id

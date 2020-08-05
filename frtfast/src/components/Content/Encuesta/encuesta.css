@@ -1,0 +1,22 @@
+.letras2{
+   font-style: oblique;
+   font-weight: bold;
+   font-size: 15px;
+}
+
+.titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.botones{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 8em;
+    background-color: yellow;
+    border-radius: 10em;
+}

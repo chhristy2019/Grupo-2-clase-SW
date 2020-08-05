@@ -1,0 +1,39 @@
+.listholder {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 100px);
+    font-family: 'Raleway', serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+    width: 65.6em;
+  }
+  .listItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0.5em;
+    background-color: rgba(225, 225, 238, 0.335);
+    border-bottom: 1px solid rgba(7, 6, 6, 0.335);
+    min-height:2em;
+    margin-left:-1em;
+    margin-right:-1em;
+    align-items: center;
+    
+  }
+  
+  .listItem b:first-child{
+    width:40%;
+    font-size: 0.8em;
+  }
+  
+  .letras1 div{
+    font-family: 'Raleway', serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2em;
+    background-color: rgba(225, 225, 238, 0.335);
+    border-bottom: 1px solid rgba(160, 152, 152, 0.335);
+    width: 19em;
+  }

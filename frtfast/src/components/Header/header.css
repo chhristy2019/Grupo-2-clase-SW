@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    background-color:rgb(33, 33, 33);
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 3px #3533;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+  }
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  
+
+  

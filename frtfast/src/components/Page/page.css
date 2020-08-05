@@ -1,0 +1,15 @@
+main{
+    margin-top:56px;
+    margin-bottom: 72px;
+    padding:0.5em 1em;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+
+    background-image: url(./FBN.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  
+  }

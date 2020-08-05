@@ -1,7 +1,7 @@
-//Rutas de la Entidad Servicio
+//Rutas de la Entidad producto
 const express = require('express');
 let router = express.Router();
-const model = require('./service.model');
+const model = require('./product.model');
 
  const init = async ()=>{
     await model.initModel();
@@ -10,19 +10,19 @@ const model = require('./service.model');
 
  router.get('/', async (req, res)=>{
     try{
-        let Servicio = await model.getAll();
-        res.status(200).json(Servicio);
+        let producto = await model.getAll();
+        res.status(200).json(producto);
     }catch (err){
         console.log(err);
         res.status(500).json({"Error":"Algo salio Mal intentar de nuevo."});
     }
  }); //get /
- 
+
  router.get('/one/:id', async (req, res)=>{
     try{
         let {id} = req.params;
-        let servicio = await model.getone(id);
-        res.status(200).json(servicio);
+        let producto = await model.getone(id);
+        res.status(200).json(producto);
     }catch(err){
       console.log(err);
       res.status(500).json({ "Error": "Algo Sucedio Mal intentar de nuevo." });
@@ -31,8 +31,8 @@ const model = require('./service.model');
 
  router.post('/new', async(req, res)=>{
     try{
-        let {nombreempresa, nombreservicio, descripcion, precio, horario, contacto} = req.body;
-        const rslt = await model.newOne(nombreempresa, nombreservicio, descripcion, precio, horario, contacto);
+        let {nombreempresa, nombreproducto, descripcion, precio, horario, contacto} = req.body;
+        const rslt = await model.newOne(nombreempresa, nombreproducto, descripcion, precio, horario, contacto);
         res.status(200).json(rslt);
     }catch (err){
         console.log(err);
@@ -45,8 +45,8 @@ const model = require('./service.model');
   router.put('/one/:id', async (req, res)=>{
     try{
       let {id} = req.params;
-      let{nombreempresa, nombreservicio, descripcion, precio, horario, contacto}= req.body;
-      const rlst = await model.updateOne(id, nombreempresa, nombreservicio, descripcion, precio, horario, contacto);
+      let{nombreempresa, nombreproducto, descripcion, precio, horario, contacto}= req.body;
+      const rlst = await model.updateOne(id, nombreempresa, nombreproducto, descripcion, precio, horario, contacto);
       res.status(200).json(rlst);
     }catch(err){
       console.log(err);
